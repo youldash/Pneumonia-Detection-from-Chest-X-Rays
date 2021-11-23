@@ -59,6 +59,9 @@ In short, DICOM pixel array modifications will include:
 
 #### CNN Architecture
 
+##### In a nutshell
+
+In the process of designing the algorithm, a **Sequential** model was built by fine-tuning an existing **VGG16** pertained model (obtained via download) with predefined **ImageNet** weights. So, the new model included the original VGG16 model layers and incorporated them in its initial design. The VGG16 internal layers were then frozen to avoid training and adjusting the weights. The output from this new model was then flattened.
 
 ### 3. Algorithm Training
 
@@ -78,6 +81,7 @@ In short, DICOM pixel array modifications will include:
 **Final Threshold and Explanation:**
 
 ### 4. Databases
+
  (For the below, include visualizations as they are useful and relevant)
 
 **Description of Training Dataset:** 
