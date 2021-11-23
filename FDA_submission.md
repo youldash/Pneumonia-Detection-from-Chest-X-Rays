@@ -26,6 +26,10 @@
 
 **DICOM Checking Steps:**
 
+- Analyze the DICOM file to ensure that the body part examined is a valid chest X-ray.
+- Analyze the DICOM file again to ensure that the Imaging Modality is “DX.”
+- Analyze the DICOM file again to ensure that the Viewing Positions are valid AP and PA positions.
+
 **Preprocessing Steps:**
 
 **CNN Architecture:**
