@@ -37,6 +37,8 @@ In other words, the checks involve:
 - Analyzing the DICOM file again to ensuring that the Imaging Modality is “DX.”
 - Analyzing the DICOM file again to ensure that the Viewing Positions are valid AP and PA positions.
 
+If *any* of the three categories did not match the requirements, a warning message will then be presented telling the user that the image did not meet the expected criteria.
+
 **Preprocessing Steps:**
 
 **CNN Architecture:**
