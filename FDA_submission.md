@@ -33,6 +33,7 @@ Modality == 'DX'
 PatientPosition is in a 'PA' or 'AP' viewing position
 ```
 In other words, the checks involve:
+
 - Analyzing the DICOM file, ensuring that the body part examined is a valid chest X-ray.
 - Analyzing the DICOM file again to ensuring that the Imaging Modality is “DX.”
 - Analyzing the DICOM file again to ensure that the Viewing Positions are valid AP and PA positions.
@@ -42,7 +43,12 @@ If *any* of the three categories did not match the requirements, a warning messa
 **Preprocessing Steps:**
 
 **CNN Architecture:**
+If a DICOM file passes the initial DICOM file header checks, the DICOM pixel array will then be edited. A copy of the DICOM pixel array data will then be **normalized**, and **resized** to fit a 224x224 pixel ratio (or resolution).
 
+In short, DICOM pixel array modifications will include:
+
+- Image standardization (a.k.a. normalization), and
+- Image resizing.
 
 ### 3. Algorithm Training
 
