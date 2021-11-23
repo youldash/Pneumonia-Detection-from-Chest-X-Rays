@@ -26,9 +26,16 @@
 
 **DICOM Checking Steps:**
 
-- Analyze the DICOM file to ensure that the body part examined is a valid chest X-ray.
-- Analyze the DICOM file again to ensure that the Imaging Modality is “DX.”
-- Analyze the DICOM file again to ensure that the Viewing Positions are valid AP and PA positions.
+The implementation checks the **DICOM** file *headers* looking for certain parameters like the following:
+```
+BodyPartExamined == 'CHEST'
+Modality == 'DX'
+PatientPosition is in a 'PA' or 'AP' viewing position
+```
+In other words, the checks involve:
+- Analyzing the DICOM file, ensuring that the body part examined is a valid chest X-ray.
+- Analyzing the DICOM file again to ensuring that the Imaging Modality is “DX.”
+- Analyzing the DICOM file again to ensure that the Viewing Positions are valid AP and PA positions.
 
 **Preprocessing Steps:**
 
