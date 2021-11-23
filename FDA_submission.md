@@ -43,7 +43,7 @@ If *any* of the three categories did not match the requirements, a warning messa
 **Preprocessing Steps:**
 
 **CNN Architecture:**
-If a DICOM file passes the initial DICOM file header checks, the DICOM pixel array will then be edited. A copy of the DICOM pixel array data will then be **normalized**, and **resized** to fit a 224x224 pixel ratio (or resolution).
+If a DICOM file passes the initial DICOM file header checks, the DICOM pixel array will then be edited. A copy of the DICOM pixel array data will then be **normalized**, and **resized** to fit a `224 x 224` pixel ratio (or resolution).
 
 In short, DICOM pixel array modifications will include:
 
