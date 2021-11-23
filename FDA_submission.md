@@ -24,9 +24,7 @@
 	<img src="misc/Flowchart.png" width="100%" />
 </div>
 
-**DICOM Checking Steps:**
-
-The implementation checks the **DICOM** file *headers* looking for certain parameters like the following:
+**DICOM Checking Steps:** The implementation checks the **DICOM** file *headers* looking for certain parameters like the following:
 ```
 BodyPartExamined == 'CHEST'
 Modality == 'DX'
@@ -40,19 +38,20 @@ In other words, the checks involve:
 
 If *any* of the three categories did not match the requirements, a warning message will then be presented telling the user that the image did not meet the expected criteria.
 
-**Preprocessing Steps:**
-
-**CNN Architecture:**
-If a DICOM file passes the initial DICOM file header checks, the DICOM pixel array will then be edited. A copy of the DICOM pixel array data will then be **normalized**, and **resized** to fit a `224 x 224` pixel ratio (or resolution).
+**Preprocessing Steps:** If a DICOM file passes the initial DICOM file header checks, the DICOM pixel array will then be edited. A copy of the DICOM pixel array data will then be **normalized**, and **resized** to fit a `224 x 224` pixel ratio (or resolution).
 
 In short, DICOM pixel array modifications will include:
 
 - Image standardization (a.k.a. normalization), and
 - Image resizing.
 
+**CNN Architecture:**
+
+
 ### 3. Algorithm Training
 
 **Parameters:**
+
 * Types of augmentation used during training
 * Batch size
 * Optimizer learning rate
