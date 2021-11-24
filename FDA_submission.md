@@ -187,15 +187,18 @@ Because the original radiology reports were not publicly available for general r
 
 ### 6. FDA Validation Plan
 
-
-
 #### Patient Population Description for FDA Validation Dataset:
 
+The FDA validation data was acquired from `6` patients, all of which are males aging: `58yrs` for one patient, `71yrs` for another, and the remaining 4 aged at `81yrs` old.
+
+To provide a more-meaningful validation, especially when it comes to the data in question, we believe the patient population *should* be consist of both genders – in a ratio that divides the population by approximately `1:1`. 
 
 #### Ground Truth Acquisition Methodology:
 
-
+The goal (or purpose) of this device design, as mentioned earlier, is to assist the radiologist with his/her routinely workflow onsite. So, the ideal situation would be for the radiologist to review the X-ray scans while having the relevant medial histories (and diagnoses) handy with them – especially any lab reports that could be acquired. For radiologists to *bypass* any inaccuracies introduced by the NLP approaches reported, they should be able to acquire digital copies for them to effectively identify and mark the diseases visible to them in the X-rays. This step can be considered a *checksum* process whereby a list of potentially common diseases can be thoroughly, and easily identified in a timely fashion.
 
 #### Algorithm Performance Standard:
 
+Based on the work published by P. Rajpurkarpar, et. al. (2017), the performance standard is the **F1-scores** metric, which is used in comparing radiologists and various novel algorithms in the domain. The F1-score servs as a *harmonic average* of the precision and recall of the models published in the literature.
 
+The device developed by Rajpurkarpar, et. al. (dubbed **CheXNet**) seemed to have achieved an F1-score of `0.435`, while radiologists seemed to have averaged at a score of `0.387`. The F1-score reported for `VGG16_v2` was ` 0.4166` for its maximum threshold achieved, which is slightly lower than CheXNet’s score. Nevertheless, these scores can serve as benchmarks for future devices and innovations, and enhancements (on any existing works like the device presented herein) to come.
