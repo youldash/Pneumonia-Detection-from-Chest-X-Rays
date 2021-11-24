@@ -115,8 +115,8 @@ _________________________________________________________________
 
 Keras's `ImageDataGenerator` Python package was used to define the following parameters:
 
-- An image horizontal flip with a 10% shift range in width, height, shear and zoom.
-- An image rotation range set to 20 degrees.
+- An image horizontal flip with a `10%` shift range in width, height, shear and zoom.
+- An image rotation range set to `20` degrees.
 
 ##### Batch size:
 
