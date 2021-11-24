@@ -164,12 +164,11 @@ Final (maximum) threshold reached was `0.2934`. This figure was obtained when th
 
 ### 4. Databases
 
- (For the below, include visualizations as they are useful and relevant)
+#### Description of Training Dataset:
 
-**Description of Training Dataset:** 
+The [NIH Chest X-ray](https://www.kaggle.com/nih-chest-xrays/data) training data set contains `112,120` X-ray images with disease labels from `30,805` unique patients – having `15` *unique* disease labels within. The training data set is balanced for Pneumonia cases and contains `2290` images sampled from the complete image set.
 
-
-**Description of Validation Dataset:** 
+#### Description of Validation Dataset:
 
 
 ### 5. Ground Truth
@@ -178,8 +177,10 @@ Final (maximum) threshold reached was `0.2934`. This figure was obtained when th
 
 ### 6. FDA Validation Plan
 
-**Patient Population Description for FDA Validation Dataset:**
+#### Patient Population Description for FDA Validation Dataset:
 
-**Ground Truth Acquisition Methodology:**
+#### Ground Truth Acquisition Methodology:
 
-**Algorithm Performance Standard:**
+#### Algorithm Performance Standard:
+
+
