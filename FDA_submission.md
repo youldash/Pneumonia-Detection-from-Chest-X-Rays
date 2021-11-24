@@ -141,11 +141,11 @@ One dropout layer to `VGG16_v2` (i.e., by specifying `fc_list=[1024]` in the cod
 ##### Algorithm training performance visualization 
 
 <div align="center">
-	<img src="out/VGG16_v1_Training_Evolution_Accuracy.png" width="100%" />
+	<img src="out/VGG16_v2_Training_Evolution_Accuracy.png" width="100%" />
 </div>
 
 <div align="center">
-	<img src="out/VGG16_v1_Training_Evolution_Losses.png" width="100%" />
+	<img src="out/VGG16_v2_Training_Evolution_Losses.png" width="100%" />
 </div>
 
 ##### P-R curve
