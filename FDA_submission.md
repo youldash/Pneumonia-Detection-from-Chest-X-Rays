@@ -61,11 +61,12 @@ In short, DICOM pixel array modifications will include:
 
 ##### In a nutshell
 
-In the process of designing the algorithm, a **Sequential** model was built by fine-tuning an existing **VGG16** pertained model (obtained via download) with predefined **ImageNet** weights. So, the new model included the original VGG16 model layers and incorporated them in its initial design. The VGG16 internal layers were then frozen to avoid training and adjusting the weights. The output from this new model was then flattened.
+In the process of designing the algorithm, a **Sequential** model was built by fine-tuning an existing **VGG16** pertained model (obtained via download) with predefined **ImageNet** weights. So, the new model included the original VGG16 model layers and incorporated them in its initial design. The VGG16 internal layers were then *frozen* to avoid training and end up accidentally adjusting the original VGG16 weights. The output from this new model was then flattened, and new layers were then added (to the end of the model).
 
-### 3. Algorithm Training
+The following is a summary (detailed description) of the original VGG16 model used in the design of the final model:
 
 ```
+Model: "VGG16"
 _________________________________________________________________
  Layer (type)                Output Shape              Param #   
 =================================================================
@@ -91,15 +92,46 @@ _________________________________________________________________
 =================================================================
 ```
 
+The following is a summary of the layers added to the final model, which we will refer to from now on as `VGG16_v2`:
+
+```
+Model: "VGG16_v2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ model_2 (Functional)        (None, 7, 7, 512)         14714688  
+ flatten_1 (Flatten)         (None, 25088)             0         
+ dropout (Dropout)           (None, 25088)             0         
+ dense_1 (Dense)             (None, 1024)              25691136  
+ dense_2 (Dense)             (None, 1)                 1025      
+=================================================================
+```
+
+### 3. Algorithm Training
 
 #### Parameters:
 
-* Types of augmentation used during training
-* Batch size
-* Optimizer learning rate
-* Layers of pre-existing architecture that were frozen
-* Layers of pre-existing architecture that were fine-tuned
-* Layers added to pre-existing architecture
+##### Types of augmentation used during training:
+
+Keras's `ImageDataGenerator` Python package was used to define the following parameters:
+
+- An image horizontal flip with a 10% shift range in width, height, shear and zoom.
+- An image rotation range set to 20 degrees.
+
+##### Batch size:
+
+A `BATCH_SIZE` hyperparameter was initially set to values greater than `16`, but due to GPU VRAM limitations in the training process (as explained in the training report/notebook) it was adjusted to `8`.
+
+##### Optimizer learning rate:
+
+
+##### Layers of pre-existing architecture that were frozen:
+
+
+##### Layers of pre-existing architecture that were fine-tuned:
+
+
+##### Layers added to pre-existing architecture:
 
 << Insert algorithm training performance visualization >> 
 
