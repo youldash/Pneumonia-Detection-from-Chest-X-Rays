@@ -166,9 +166,19 @@ Final (maximum) threshold reached was `0.2934`. This figure was obtained when th
 
 #### Description of Training Dataset:
 
-The [NIH Chest X-ray](https://www.kaggle.com/nih-chest-xrays/data) training data set contains `112,120` X-ray images with disease labels from `30,805` unique patients – having `15` *unique* disease labels within. The training data set is balanced for Pneumonia cases and contains `2290` images sampled from the complete image set.
+The [NIH Chest X-ray](https://www.kaggle.com/nih-chest-xrays/data) training data set contains `112,120` X-ray images with disease labels from `30,805` unique patients – having `15` *unique* disease labels/names within. The training data set is balanced for Pneumonia cases and contains `2290` images sampled from the complete image set.
+
+By using patient demographics such as the **age** and **gender**, we can get a better picture of the general population and distribution. The following figure can give a better picture of how the unique cases are identified by gender:
+
+<div align="center">
+	<img src="out/EDA_Distribution_by_Gender.png" width="100%" />
+</div>
 
 #### Description of Validation Dataset:
+
+The validation data set is an *imbalanced* set containing `20%` cases positive for Pneumonia, and a total of `1430` images sampled from the `112,120` chest X-ray data – having `14` *unique* disease labels/names from `30,805` unique patients.
+
+By saying imbalanced we also emphasize that the data set (for effectively training and validating the algorithm) was split into `80%` training data, and the remaining `20%` for validation purposes.By saying imbalanced we also emphasize that the data set (for effectively training and validating the algorithm) was split into `80%` training data, and the remaining `20%` for validation purposes.
 
 
 ### 5. Ground Truth
