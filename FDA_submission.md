@@ -124,6 +124,7 @@ A `BATCH_SIZE` hyperparameter was initially set to values greater than `16`, but
 
 ##### Optimizer learning rate:
 
+A `LR_RATE` hyperparameter was set to `1e-5` (i.e., `0.00001`).
 
 ##### Layers of pre-existing architecture that were frozen:
 
