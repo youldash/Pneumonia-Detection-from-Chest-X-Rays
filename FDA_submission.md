@@ -128,15 +128,29 @@ A `LR_RATE` hyperparameter was set to `1e-5` (i.e., `0.00001`).
 
 ##### Layers of pre-existing architecture that were frozen:
 
+All output layers were, except the layer named `block5_pool`.
 
 ##### Layers of pre-existing architecture that were fine-tuned:
 
+No layers from `VGG16` were fine-tuned at this stage.
 
 ##### Layers added to pre-existing architecture:
 
-<< Insert algorithm training performance visualization >> 
+One dropout layer to `VGG16_v2` (i.e., by specifying `fc_list=[1024]` in the code), and one Fully-connected (FC) layer into the model architecture.
 
-<< Insert P-R curve >>
+##### Algorithm training performance visualization 
+
+<div align="center">
+	<img src="out/VGG16_v1_Training_Evolution_Accuracy.png" width="100%" />
+</div>
+
+<div align="center">
+	<img src="out/VGG16_v1_Training_Evolution_Losses.png" width="100%" />
+</div>
+
+##### P-R curve
+
+
 
 **Final Threshold and Explanation:**
 
