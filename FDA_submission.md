@@ -150,7 +150,9 @@ One dropout layer to `VGG16_v2` (i.e., by specifying `fc_list=[1024]` in the cod
 
 ##### P-R curve
 
-
+<div align="center">
+	<img src="out/VGG16_v2_Precision_Recall_Curve.png" width="100%" />
+</div>
 
 **Final Threshold and Explanation:**
 
