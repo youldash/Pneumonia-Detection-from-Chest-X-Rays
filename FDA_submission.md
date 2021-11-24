@@ -156,14 +156,10 @@ One dropout layer to `VGG16_v2` (i.e., by specifying `fc_list=[1024]` in the cod
 
 #### Final Threshold and Explanation:
 
-Final (maximum) threshold reached was `0.2934. This figure was obtained when then F1-score waz maxed out at a value of `0.4166`. It corresponded to a `28.25%` (i.e., `0.2825`) Precision value and a `79.02%` (i.e., `0.7902`) Recall value.
+Final (maximum) threshold reached was `0.2934`. This figure was obtained when then F1-score waz maxed out at a value of `0.4166`. It corresponded to a `28.25%` (i.e., `0.2825`) Precision value and a `79.02%` (i.e., `0.7902`) Recall value.
 
 <div align="center">
 	<img src="out/VGG16_v2_F1_scores_by_Threshold.png" width="100%" />
-</div>
-
-<div align="center">
-	<img src="out/VGG16_v2_Precision_Recall_by_Threshold.png" width="100%" />
 </div>
 
 ### 4. Databases
