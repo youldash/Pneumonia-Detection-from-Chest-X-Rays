@@ -180,16 +180,21 @@ The validation data set is an *imbalanced* set containing `20%` cases positive f
 
 By saying imbalanced we also emphasize that the data set (for effectively training and validating the algorithm) was split into `80%` training data, and the remaining `20%` for validation purposes.By saying imbalanced we also emphasize that the data set (for effectively training and validating the algorithm) was split into `80%` training data, and the remaining `20%` for validation purposes.
 
-
 ### 5. Ground Truth
 
-
+It appears that the data used in this work was curated by the [NIH](https://www.kaggle.com/nih-chest-xrays/data). Furthermore, the disease labels for each image (or scan if you may will) was created using Natural Language Processing (or NLP) techniques for processing the associated (contextual) radiological reports. It is reported that the *estimated* accuracy level of the NLP approach was believed to be over `90%`.
+Because the original radiology reports were not publicly available for general review, we believe this sets a limitation on the NLP accuracy and as such, we cannot rectify the labelling. If such crucial pieces of information were made available for anyone to review, then the labelling accuracy is expected to be reasonably higher that originally reported.
 
 ### 6. FDA Validation Plan
 
+
+
 #### Patient Population Description for FDA Validation Dataset:
 
+
 #### Ground Truth Acquisition Methodology:
+
+
 
 #### Algorithm Performance Standard:
 
